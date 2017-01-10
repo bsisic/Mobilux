@@ -32,6 +32,7 @@ module.exports = StyleSheet.create({
   },
   details: {
     paddingLeft: 30,
+    paddingBottom: 20
   },
   dettxt: {
     color: 'grey',
@@ -46,5 +47,5 @@ module.exports = StyleSheet.create({
     height: 50,
     borderRadius: 50,
     backgroundColor: '#222',
-  }
+  },
 });

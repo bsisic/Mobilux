@@ -11,6 +11,8 @@ import { setIndex } from '../../actions/list';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
+import Hr from 'react-native-hr';
+
 const {
   reset,
   pushRoute,
@@ -56,12 +58,24 @@ class Home extends Component {
             <Text style={styles.dettxt}>Dernière mise à jour : il y a 36 min</Text>
           </Row>
 
-          <Row style={{paddingTop:10}}>
+          <Row>
             <Icon style={styles.iconmt} name="ios-train" />
             <Text style={styles.imptxt}>Alerte Train : retard de +/- 35min sur la ligne 5</Text>
           </Row>
           <Row style={styles.details}>
             <Text style={styles.dettxt}>Dernière mise à jour : il y a 6 min</Text>
+          </Row>
+
+          <Hr lineColor='#b3b3b3'
+              text='Météo'
+          />
+
+          <Row style={{paddingTop:20}}>
+            <Icon style={styles.iconmt} name="ios-thunderstorm-outline" />
+            <Text style={styles.imptxt}>Alerte Météo : orage prévu vers 17h</Text>
+          </Row>
+          <Row style={styles.details}>
+            <Text style={styles.dettxt}>Dernière mise à jour : il y a 11 min</Text>
           </Row>
           </Grid>
 
