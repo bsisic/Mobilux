@@ -45,7 +45,7 @@ class Home extends Component {
             <Icon name="ios-menu" />
           </Button>
 
-          <Title style={{color:'#fff'}}>{(this.props.name) ? this.props.name : 'Home'}</Title>
+          <Title style={{color:'#fff'}}>{(this.props.name) ? this.props.name : 'Dashboard'}</Title>
         </Header>
 
         <Content>
