@@ -36,6 +36,14 @@ module.exports = StyleSheet.create({
     backgroundColor: '#222',
     alignSelf: 'center',
   },
+  fbbtn: {
+    marginTop: 20,
+    alignSelf: 'center',
+  },
+  bottombtn: {
+    height: 20,
+    marginBottom: 1,
+  },
   forgot: {
     color: '#fff',
     textAlign: 'center',
