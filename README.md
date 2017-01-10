@@ -7,4 +7,4 @@ UI for lux-mobility (React Native Redux App)
 
  ![ios-demo](/Screenshots/iOS/flux.png)
  
- ![ios-demo](/Screenshots/iOS/createalert.gif)
+ ![ios-demo](/Screenshots/iOS/createalert.png)
