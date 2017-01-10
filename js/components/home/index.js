@@ -47,7 +47,7 @@ class Home extends Component {
         </Header>
 
         <Content>
-          <Button style={styles.alertbtn}>
+          <Button style={styles.alertbtn} onPress={() => this.pushRoute('blankPage')}>
             +
           </Button>
         </Content>

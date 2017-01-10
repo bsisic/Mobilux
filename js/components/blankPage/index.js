@@ -33,16 +33,12 @@ class BlankPage extends Component {
 
     return (
       <Container style={styles.container}>
-        <Header>
+        <Header style={{backgroundColor:'#5EC4E8'}}>
           <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
+            <Icon style={{color:'#fff'}} name="ios-arrow-back" />
           </Button>
 
-          <Title>{(name) ? this.props.name : 'Blank Page'}</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
+          <Title style={{color:'#fff'}}>{(name) ? this.props.name : "Création d'une alerte"}</Title>
         </Header>
 
         <Content padder>
