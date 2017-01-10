@@ -39,30 +39,17 @@ class Home extends Component {
     return (
       <Container theme={myTheme} style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
-            <Icon name="ios-power" />
-          </Button>
-
-          <Title>{(this.props.name) ? this.props.name : 'Home'}</Title>
-
           <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
           </Button>
+
+          <Title style={{color:'#fff'}}>{(this.props.name) ? this.props.name : 'Home'}</Title>
         </Header>
 
         <Content>
-          <Grid style={styles.mt}>
-            {this.props.list.map((item, i) =>
-              <Row key={i}>
-                <TouchableOpacity
-                  style={styles.row}
-                  onPress={() => this.pushRoute('blankPage', i)}
-                >
-                  <Text style={styles.text}>{item}</Text>
-                </TouchableOpacity>
-              </Row>
-            )}
-          </Grid>
+          <Button style={styles.alertbtn}>
+            +
+          </Button>
         </Content>
       </Container>
     );
