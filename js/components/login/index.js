@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Content, InputGroup, Input, Button, Icon, View } from 'native-base';
+import { Container, Content, InputGroup, Input, Button, Icon, View, Text} from 'native-base';
 
 import { setUser } from '../../actions/user';
 import styles from './styles';
@@ -12,7 +12,7 @@ const {
   replaceAt,
 } = actions;
 
-const background = require('../../../images/shadow.png');
+const background = require('../../../images/logo.png');
 
 class Login extends Component {
 
@@ -28,6 +28,7 @@ class Login extends Component {
     super(props);
     this.state = {
       name: '',
+      forgotpassword: 'Mot de passe oublié ?',
     };
   }
 
@@ -45,7 +46,7 @@ class Login extends Component {
       <Container>
         <View style={styles.container}>
           <Content>
-            <Image source={background} style={styles.shadow}>
+            <Image source={background} style={styles.logo} />
               <View style={styles.bg}>
                 <InputGroup style={styles.input}>
                   <Icon name="ios-person" />
@@ -59,10 +60,13 @@ class Login extends Component {
                   />
                 </InputGroup>
                 <Button style={styles.btn} onPress={() => this.replaceRoute('home')}>
-                  Login
+                  Connexion
                 </Button>
+                <Text style={styles.forgot}>{this.state.forgotpassword}</Text>
+                  <Button style={styles.registerbtn} onPress={() => this.replaceRoute('home')}>
+                      Créer un nouveau compte
+                  </Button>
               </View>
-            </Image>
           </Content>
         </View>
       </Container>

@@ -7,22 +7,21 @@ const deviceHeight = Dimensions.get('window').height;
 
 module.exports = StyleSheet.create({
   container: {
+    height: deviceHeight / 1,
     position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#FBFAFA',
+    backgroundColor: '#5EC4E8',
   },
-  shadow: {
-    flex: 1,
-    width: null,
-    height: null,
+  logo: {
+    alignSelf: 'center',
+    width: 150,
+    marginTop: 40,
   },
   bg: {
-    flex: 1,
-    marginTop: deviceHeight / 1.75,
-    paddingTop: 20,
+    marginTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 30,
@@ -33,6 +32,23 @@ module.exports = StyleSheet.create({
   },
   btn: {
     marginTop: 20,
+    width: 300,
+    backgroundColor: '#222',
     alignSelf: 'center',
   },
+  forgot: {
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 20,
+    textDecorationLine : 'underline',
+  },
+  registerbtn: {
+    marginTop: 20,
+    width: 300,
+    backgroundColor: 'transparent',
+    alignSelf: 'center',
+    borderStyle: 'solid',
+    borderWidth: 2,
+    borderColor: '#fff'
+  }
 });
