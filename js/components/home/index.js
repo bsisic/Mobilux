@@ -47,6 +47,24 @@ class Home extends Component {
         </Header>
 
         <Content>
+          <Grid style={styles.mt}>
+          <Row>
+            <Icon style={styles.iconmt} name="ios-car" />
+            <Text style={styles.imptxt}>Alerte Trafic : accident sur l'A4</Text>
+          </Row>
+          <Row style={styles.details}>
+            <Text style={styles.dettxt}>Dernière mise à jour : il y a 36 min</Text>
+          </Row>
+
+          <Row style={{paddingTop:10}}>
+            <Icon style={styles.iconmt} name="ios-train" />
+            <Text style={styles.imptxt}>Alerte Train : retard de +/- 35min sur la ligne 5</Text>
+          </Row>
+          <Row style={styles.details}>
+            <Text style={styles.dettxt}>Dernière mise à jour : il y a 6 min</Text>
+          </Row>
+          </Grid>
+
           <Button style={styles.alertbtn} onPress={() => this.pushRoute('blankPage')}>
             +
           </Button>

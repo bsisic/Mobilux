@@ -3,7 +3,7 @@ const React = require('react-native');
 
 const { StyleSheet, Dimensions } = React;
 
-const deviceHeight = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
 
 module.exports = StyleSheet.create({
   container: {
@@ -20,6 +20,23 @@ module.exports = StyleSheet.create({
   },
   mt: {
     marginTop: 18,
+    width: null,
+    alignSelf: 'center',
+  },
+  iconmt: {
+    fontSize: 18,
+  },
+  imptxt: {
+    fontWeight: 'bold',
+    paddingLeft: 10,
+  },
+  details: {
+    paddingLeft: 30,
+  },
+  dettxt: {
+    color: 'grey',
+    fontSize: 12,
+    textAlign: 'center',
   },
   alertbtn: {
     marginTop: 20,
