@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
+import { Container, Header, Title, Content, Text, Button, Icon, Card, CardItem, View } from 'native-base';
 import { Grid, Row } from 'react-native-easy-grid';
 
 import { openDrawer } from '../../actions/drawer';
@@ -49,40 +49,47 @@ class Home extends Component {
         </Header>
 
         <Content>
-          <Grid style={styles.mt}>
-          <Row>
-            <Icon style={styles.iconmt} name="ios-car" />
-            <Text style={styles.imptxt}>Alerte Trafic : accident sur l'A4</Text>
-          </Row>
-          <Row style={styles.details}>
-            <Text style={styles.dettxt}>Dernière mise à jour : il y a 36 min</Text>
-          </Row>
+                   <Card>
+                       <CardItem header>
+                           <Text>Alertes Infos</Text>
+                       </CardItem>
 
-          <Row>
-            <Icon style={styles.iconmt} name="ios-train" />
-            <Text style={styles.imptxt}>Alerte Train : retard de +/- 35min sur la ligne 5</Text>
-          </Row>
-          <Row style={styles.details}>
-            <Text style={styles.dettxt}>Dernière mise à jour : il y a 6 min</Text>
-          </Row>
+                       <CardItem>
+                           <View style={styles.det}>
+                             <Text style={styles.imptxt}><Icon style={styles.iconmt} name="ios-car" /> Trafic : accident sur l'A4</Text>
+                           </View>
+                           <View style={styles.det}>
+                              <Text style={styles.dettxt}>Dernière mise à jour : il y a 36 min</Text>
+                           </View>
+                       </CardItem>
 
-          <Hr lineColor='#b3b3b3'
-              text='Météo'
-          />
+                       <CardItem>
+                           <View style={styles.det}>
+                             <Text style={styles.imptxt}><Icon style={styles.iconmt} name="ios-train" /> Train : retard de +/- 35min sur la ligne 5</Text>
+                           </View>
+                           <View style={styles.det}>
+                              <Text style={styles.dettxt}>Dernière mise à jour : il y a 6 min</Text>
+                           </View>
+                       </CardItem>
 
-          <Row style={{paddingTop:20}}>
-            <Icon style={styles.iconmt} name="ios-thunderstorm-outline" />
-            <Text style={styles.imptxt}>Alerte Météo : orage prévu vers 17h</Text>
-          </Row>
-          <Row style={styles.details}>
-            <Text style={styles.dettxt}>Dernière mise à jour : il y a 11 min</Text>
-          </Row>
-          </Grid>
+                       <CardItem header>
+                           <Text>Météo</Text>
+                       </CardItem>
 
-          <Button style={styles.alertbtn} onPress={() => this.pushRoute('blankPage')}>
-            +
-          </Button>
-        </Content>
+                       <CardItem>
+                          <View style={styles.det}>
+                             <Text style={styles.imptxt}><Icon style={styles.iconmt} name="ios-thunderstorm-outline" /> Alerte : orage prévu vers 17h</Text>
+                          </View>
+                          <View style={styles.det}>
+                             <Text style={styles.dettxt}>Dernière mise à jour : il y a 11 min</Text>
+                          </View>
+                       </CardItem>
+                  </Card>
+
+                  <Button style={styles.alertbtn} onPress={() => this.pushRoute('blankPage')}>
+                    +
+                  </Button>
+               </Content>
       </Container>
     );
   }

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
+import { Container, Header, Title, Content, Text, Button, Icon, View } from 'native-base';
 import Modal from 'react-native-root-modal';
 
 import { openDrawer } from '../../actions/drawer';
@@ -62,9 +62,9 @@ class BlankPage extends Component {
 
         <Content style={styles.cont}>
           <Text style={styles.txt}>Si</Text>
-          <Button bordered large success style={styles.btn} onPress={this.showModal}><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
+          <Button bordered success style={styles.btn} onPress={this.showModal}><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
           <Text style={styles.txt}>Alors</Text>
-          <Button bordered large danger style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux de sortie</Button>
+          <Button bordered danger style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux de sortie</Button>
 
             <Modal
               style={{
@@ -72,12 +72,19 @@ class BlankPage extends Component {
                   right: 0,
                   bottom: 0,
                   left: 0,
-                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                  backgroundColor: 'rgba(0, 0, 0, 0.4)',
               }}
               visible={this.state.visible}>
-              <Button style={styles.close} danger onPress={this.hideModal}>
+              <Button style={styles.close} onPress={this.hideModal}>
                 <Icon name='ios-close-circle' />
               </Button>
+              <View style={{alignSelf:'center',width:null}}>
+                <Button style={styles.inflow} large info>Météo</Button>
+                <Button style={styles.inflow} large info>Trafic Routier</Button>
+                <Button style={styles.inflow} large info>Trafic Ferroviaire</Button>
+                <Button style={styles.inflow} large info>Trafic Bus</Button>
+                <Button style={styles.inflow} large info>Stations de vélos</Button>
+              </View>
             </Modal>
         </Content>
       </Container>

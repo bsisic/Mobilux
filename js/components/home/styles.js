@@ -9,9 +9,8 @@ module.exports = StyleSheet.create({
   container: {
     backgroundColor: '#FBFAFA',
   },
-  row: {
-    flex: 1,
-    alignItems: 'center',
+  cont:{
+    width: deviceWidth / 1.2,
   },
   text: {
     fontSize: 20,
@@ -28,11 +27,11 @@ module.exports = StyleSheet.create({
   },
   imptxt: {
     fontWeight: 'bold',
-    paddingLeft: 10,
+    fontSize: 14
   },
-  details: {
-    paddingLeft: 30,
-    paddingBottom: 20
+  det: {
+    width:null,
+    height:null,
   },
   dettxt: {
     color: 'grey',

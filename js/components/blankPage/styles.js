@@ -23,8 +23,14 @@ module.exports = StyleSheet.create({
     width: deviceWidth / 1.2,
   },
   close: {
+      backgroundColor: '#222',
       position: 'absolute',
       right: 20,
       top: 40,
+  },
+  inflow:{
+    width: deviceWidth / 1.8,
+    alignItems: 'flex-start',
+    marginTop: 40
   }
 });
