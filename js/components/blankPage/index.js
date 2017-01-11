@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
+import Modal from 'react-native-root-modal';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -12,6 +13,12 @@ const {
 } = actions;
 
 class BlankPage extends Component {
+  constructor() {
+        super();
+        this.state = {
+            visible: false
+        };
+    }
 
   static propTypes = {
     name: React.PropTypes.string,
@@ -21,8 +28,20 @@ class BlankPage extends Component {
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
-    }),
+    })
   }
+
+  showModal = () => {
+        this.setState({
+            visible: true
+        });
+    };
+
+    hideModal = () => {
+        this.setState({
+            visible: false
+        });
+    };
 
   popRoute() {
     this.props.popRoute(this.props.navigation.key);
@@ -43,9 +62,23 @@ class BlankPage extends Component {
 
         <Content style={styles.cont}>
           <Text style={styles.txt}>Si</Text>
-          <Button bordered large success style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
+          <Button bordered large success style={styles.btn} onPress={this.showModal}><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
           <Text style={styles.txt}>Alors</Text>
           <Button bordered large danger style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux de sortie</Button>
+
+            <Modal
+              style={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+              }}
+              visible={this.state.visible}>
+              <Button style={styles.close} danger onPress={this.hideModal}>
+                <Icon name='ios-close-circle' />
+              </Button>
+            </Modal>
         </Content>
       </Container>
     );

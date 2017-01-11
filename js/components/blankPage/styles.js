@@ -21,5 +21,10 @@ module.exports = StyleSheet.create({
   },
   btn:{
     width: deviceWidth / 1.2,
+  },
+  close: {
+      position: 'absolute',
+      right: 20,
+      top: 40,
   }
 });
