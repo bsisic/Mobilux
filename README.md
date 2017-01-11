@@ -1,5 +1,6 @@
 # Mobilux
-UI for lux-mobility (React Native Redux App)
+
+UI for lux-mobility
 
 ## Usage
 
@@ -9,14 +10,9 @@ UI for lux-mobility (React Native Redux App)
 
 `react-native run-ios`
 
-## Features:
+## Features
 
-React
-React Native
-Moment
-Native Base
-React Redux
-Redux
+React / React Native / Moment / Native Base / React Redux / Redux
 
 ## Screens
 
