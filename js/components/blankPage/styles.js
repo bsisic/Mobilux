@@ -1,14 +1,16 @@
 
 const React = require('react-native');
 
-const { StyleSheet } = React;
+const { StyleSheet, Dimensions } = React;
+
+const deviceWidth = Dimensions.get('window').width;
 
 module.exports = StyleSheet.create({
   container: {
     backgroundColor: '#FBFAFA',
   },
   cont: {
-    width:null,
+    width: deviceWidth / 1.2,
     alignSelf:'center'
   },
   txt:{
@@ -16,5 +18,8 @@ module.exports = StyleSheet.create({
     paddingBottom:10,
     paddingTop:10,
     fontSize: 20,
+  },
+  btn:{
+    width: deviceWidth / 1.2,
   }
 });

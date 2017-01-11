@@ -41,11 +41,11 @@ class BlankPage extends Component {
           <Title style={{color:'#fff'}}>{(name) ? this.props.name : "Création d'une alerte"}</Title>
         </Header>
 
-        <Content padder style={styles.cont}>
+        <Content style={styles.cont}>
           <Text style={styles.txt}>Si</Text>
-          <Button bordered success><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
+          <Button bordered large success style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux d'entrée</Button>
           <Text style={styles.txt}>Alors</Text>
-          <Button bordered danger><Icon name="ios-add-circle-outline"/> Ajouter un flux de sortie</Button>
+          <Button bordered large danger style={styles.btn}><Icon name="ios-add-circle-outline"/> Ajouter un flux de sortie</Button>
         </Content>
       </Container>
     );
