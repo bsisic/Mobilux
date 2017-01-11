@@ -11,4 +11,7 @@ module.exports = StyleSheet.create({
     paddingTop: 30,
     backgroundColor: '#fff',
   },
+  txt:{
+    color: '#5EC4E8'
+  }
 });

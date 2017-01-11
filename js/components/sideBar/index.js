@@ -25,10 +25,10 @@ class SideBar extends Component {
       <Content theme={myTheme} style={styles.sidebar} >
         <List>
           <ListItem button onPress={() => this.navigateTo('home')} >
-            <Text>Home</Text>
+            <Text style={styles.txt}>Dashboard</Text>
           </ListItem>
           <ListItem button onPress={() => this.navigateTo('blankPage')} >
-            <Text>Blank Page</Text>
+            <Text style={styles.txt}>Créer une alerte</Text>
           </ListItem>
         </List>
       </Content>

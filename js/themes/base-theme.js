@@ -164,7 +164,7 @@ export default {
 
 
   // List
-  listBorderColor: '#ACAAAB',
+  // listBorderColor: '#ACAAAB',
   // listBorderColor: '#ddd',
   listDividerBg: '#ddd',
   listItemHeight: 45,
@@ -211,7 +211,7 @@ export default {
 
   // Other
   borderRadiusBase: (Platform.OS === 'ios') ? 5 : 2,
-  borderWidth: 1,
+  // borderWidth: 1,
   contentPadding: 10,
 
   get darkenHeader() {
